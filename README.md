@@ -1,6 +1,6 @@
-# vue-admin-cli
+# blog-web
 
-基于vue3.x的中后台管理系统,router已配置路由表自动生成(可通过混入选项更改个别的路由配置) ui库使用 element-plus(已配置按需导入), css 框架使用 tailwindcss(下一代css框架), 请求使用axios的方式(完善了aes+rsa接口加密功能) [查看预览地址(用户名密码不为空即可)](https://vue-admin-cli.vercel.app/)
+基于vue3.x的博客项目,router已配置路由表自动生成(可通过混入选项更改个别的路由配置) ui库使用 element-plus(已配置按需导入), css 框架使用 tailwindcss(下一代css框架), 请求使用axios的方式(完善了aes+rsa接口加密功能) [查看预览地址(用户名密码不为空即可)](https://blog-web.vercel.app/)
 
 <!-- PROJECT SHIELDS -->
 
@@ -15,21 +15,21 @@
 <br />
 
 <p align="center">
-  <a href="https://github.com/Viarotel/vue-admin-cli">
+  <a href="https://github.com/Viarotel/blog-web">
     <img src="src/assets/images/logo.png" alt="viarotel" height="80">
   </a>
-  <h3 align="center">vue-admin-cli</h3>
+  <h3 align="center">blog-web</h3>
   <p align="center">
-    基于vue3.x的中后台管理系统(elementPlus+tailwindcss)
+    基于vue3.x的博客项目(elementPlus+tailwindcss)
     <br />
-    <a href="https://github.com/Viarotel/vue-admin-cli" target="_self"><strong>探索本项目的文档 »</strong></a>
+    <a href="https://github.com/Viarotel/blog-web" target="_self"><strong>探索本项目的文档 »</strong></a>
     <br />
     <br />
-    <a href="https://vue-admin-cli.vercel.app/" target="_blank">查看Demo</a>
+    <a href="https://blog-web.vercel.app/" target="_blank">查看Demo</a>
     ·
-    <a href="https://github.com/Viarotel/vue-admin-cli/issues" target="_blank">报告Bug</a>
+    <a href="https://github.com/Viarotel/blog-web/issues" target="_blank">报告Bug</a>
     ·
-    <a href="https://github.com/Viarotel/vue-admin-cli/issues" target="_blank">提出新特性</a>
+    <a href="https://github.com/Viarotel/blog-web/issues" target="_blank">提出新特性</a>
   </p>
 
 
@@ -52,7 +52,7 @@
 1. clone 本项目 或 直接下载main包
 
 ```sh
-git clone https://github.com/viarotel/vue-admin-cli.git
+git clone https://github.com/viarotel/blog-web.git
 ```
 
 ###### 运行本项目
@@ -148,16 +148,16 @@ qq:523469508 wx: luyao-ing
 
 <!-- links -->
 
-[your-project-path]:viarotel/vue-admin-cli
-[contributors-shield]: https://img.shields.io/github/contributors/viarotel/vue-admin-cli.svg?style=flat-square
-[contributors-url]: https://github.com/viarotel/vue-admin-cli/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/viarotel/vue-admin-cli.svg?style=flat-square
-[forks-url]: https://github.com/viarotel/vue-admin-cli/network/members
-[stars-shield]: https://img.shields.io/github/stars/viarotel/vue-admin-cli.svg?style=flat-square
-[stars-url]: https://github.com/viarotel/vue-admin-cli/stargazers
-[issues-shield]: https://img.shields.io/github/issues/viarotel/vue-admin-cli.svg?style=flat-square
-[issues-url]: https://img.shields.io/github/issues/viarotel/vue-admin-cli.svg
-[license-shield]: https://img.shields.io/github/license/viarotel/vue-admin-cli.svg?style=flat-square
-[license-url]: https://github.com/viarotel/vue-admin-cli/blob/master/LICENSE
+[your-project-path]:viarotel/blog-web
+[contributors-shield]: https://img.shields.io/github/contributors/viarotel/blog-web.svg?style=flat-square
+[contributors-url]: https://github.com/viarotel/blog-web/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/viarotel/blog-web.svg?style=flat-square
+[forks-url]: https://github.com/viarotel/blog-web/network/members
+[stars-shield]: https://img.shields.io/github/stars/viarotel/blog-web.svg?style=flat-square
+[stars-url]: https://github.com/viarotel/blog-web/stargazers
+[issues-shield]: https://img.shields.io/github/issues/viarotel/blog-web.svg?style=flat-square
+[issues-url]: https://img.shields.io/github/issues/viarotel/blog-web.svg
+[license-shield]: https://img.shields.io/github/license/viarotel/blog-web.svg?style=flat-square
+[license-url]: https://github.com/viarotel/blog-web/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/viarotel
