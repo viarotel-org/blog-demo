@@ -10,7 +10,7 @@
       <img
         src="@/assets/images/bg-index-banner.png"
         alt=""
-        class="w-full bg-cover h-68 md:h-126 lg:h-88 xl:h-124 lg:w-138 xl:w-194 md:rounded-md lg:rounded-lg lg:transform-gpu lg:scale-110"
+        class="w-full object-cover h-68 md:h-126 lg:h-88 xl:h-124 lg:w-138 xl:w-194 md:rounded-md lg:rounded-lg lg:transform-gpu lg:scale-110"
       />
     </div>
 
@@ -26,15 +26,16 @@
       </div>
       <div class="flex mt-4 lg:mt-0">
         <div
-          v-for="(item, index) of 3"
+          v-for="(item, index) of iconTextArr"
           :key="index"
-          class="flex items-center text-gray mr-3 hover:text-green-500"
+          :class="item.class"
+          class="flex items-center text-gray mr-3"
         >
           <via-svg-icon
-            name="fold"
+            :name="item.icon"
             class="text-xl"
           ></via-svg-icon>
-          <span class="pl-1 text-sm">3407</span>
+          <span class="pl-1 text-sm">{{ item.text }}</span>
         </div>
       </div>
     </div>
@@ -47,6 +48,23 @@ export default {
   data() {
     return {
       isReverse: false,
+      iconTextArr: [
+        {
+          text: 3407,
+          icon: "font-size",
+          class: "hover:text-red-500",
+        },
+        {
+          text: 3407,
+          icon: "browse",
+          class: "hover:text-green-500",
+        },
+        {
+          text: 3407,
+          icon: "like",
+          class: "hover:text-orange-500",
+        },
+      ],
     };
   },
   mounted() {

@@ -29,6 +29,8 @@ module.exports = {
 
         // '12': '3rem'
         ...mapClass("$:$rem", 12, 300, 0.25, 2),
+        "w-screen": "100vw",
+        "h-screen": "100vh",
       },
       inset: {
         "1/2": "50%",

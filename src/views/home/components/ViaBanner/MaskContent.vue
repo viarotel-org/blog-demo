@@ -2,12 +2,6 @@
   <div
     class="w-full h-full clip-path-polygon bg-black absolute inset-0 bg-opacity-70 backdrop-filter-blur-px-5"
   >
-    <img
-      :src="logo"
-      alt=""
-      class="h-10 ml-6 mt-8"
-    />
-
     <div
       class="absolute bottom-18 left-6 text-white w-3/4 md:w-1/2 md:left-12 lg:left-18 lg:w-1/3 lg:bottom-1/2 lg:transform lg:translate-y-1/2 duration-300 transition-all"
     >
