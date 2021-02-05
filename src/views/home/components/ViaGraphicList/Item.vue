@@ -10,7 +10,7 @@
       <img
         src="@/assets/images/bg-index-banner.png"
         alt=""
-        class="w-full object-cover h-68 md:h-126 lg:h-88 xl:h-124 lg:w-138 xl:w-194 md:rounded-md lg:rounded-lg lg:transform-gpu lg:scale-110"
+        class="w-full object-cover h-68 md:h-126 lg:h-88 xl:h-114 lg:w-138 xl:w-176 md:rounded-md lg:rounded-lg lg:transform-gpu lg:scale-110"
       />
     </div>
 
