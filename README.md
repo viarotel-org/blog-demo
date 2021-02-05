@@ -1,6 +1,6 @@
 # blog-web
 
-基于vue3.x的博客项目,router已配置路由表自动生成(可通过混入选项更改个别的路由配置) ui库使用 element-plus(已配置按需导入), css 框架使用 tailwindcss(下一代css框架), 请求使用axios的方式(完善了aes+rsa接口加密功能) [查看预览地址(用户名密码不为空即可)](https://blog-web.vercel.app/)
+基于vue3.x的博客项目,router已配置路由表自动生成(可通过混入选项更改个别的路由配置) ui库使用 element-plus(已配置按需导入), css 框架使用 tailwindcss(下一代css框架), 请求使用axios的方式(完善了aes+rsa接口加密功能) [查看预览地址(用户名密码不为空即可)](https://blog-web.viarotel.vercel.app)
 
 <!-- PROJECT SHIELDS -->
 
@@ -25,7 +25,7 @@
     <a href="https://github.com/Viarotel/blog-web" target="_self"><strong>探索本项目的文档 »</strong></a>
     <br />
     <br />
-    <a href="https://blog-web.vercel.app/" target="_blank">查看Demo</a>
+    <a href="https://blog-web.viarotel.vercel.app" target="_blank">查看Demo</a>
     ·
     <a href="https://github.com/Viarotel/blog-web/issues" target="_blank">报告Bug</a>
     ·
