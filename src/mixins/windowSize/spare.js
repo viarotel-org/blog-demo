@@ -3,16 +3,16 @@ const { body } = document;
 export const windowSize = {
   data() {
     return {
-      _windowWidth: 0,
-      _windowHeight: 0,
+      windowWidth_: 0,
+      windowHeight_: 0,
     };
   },
   computed: {
     $windowWidth() {
-      return this._windowWidth;
+      return this.windowWidth_;
     },
     $windowHeight() {
-      return this._windowHeight;
+      return this.windowHeight_;
     },
   },
   beforeMount() {
@@ -30,8 +30,8 @@ export const windowSize = {
     $_getBoundingClientRect() {
       if (document.hidden) return;
       const { width, height } = body.getBoundingClientRect();
-      this._windowWidth = width;
-      this._windowHeight = height;
+      this.windowWidth_ = width;
+      this.windowHeight_ = height;
     },
   },
 };

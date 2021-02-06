@@ -1,7 +1,11 @@
 <template>
   <div
-    :class="[modelValue ? '-translate-y-0' : '-translate-y-h-screen']"
-    class="fixed inset-0 bg-white bg-opacity-95 backdrop-filter-blur-px-5 overflow-hidden z-10 transform-gpu transition-all duration-300 flex flex-col"
+    :class="[
+      modelValue
+        ? '-translate-y-0 translate-x-0 rounded-bl-none bg-opacity-95'
+        : '-translate-y-h-screen translate-x-w-screen rounded-bl-full bg-opacity-0',
+    ]"
+    class="inset-0 fixed bg-white backdrop-filter-blur-px-5 overflow-hidden z-10 transform-gpu transition-all duration-300 ease-in-out flex flex-col"
     @touchmove.prevent="close"
     @mousewheel.prevent="close"
   >

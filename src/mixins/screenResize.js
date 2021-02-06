@@ -17,12 +17,12 @@ export const screenResize = {
   mixins: [windowSize],
   data() {
     return {
-      _breakpoint: { ...breakpoint },
+      breakpoint_: { ...breakpoint },
     };
   },
   computed: {
     $_screen() {
-      return this._breakpoint;
+      return this.breakpoint_;
     },
   },
   beforeMount() {
@@ -33,10 +33,10 @@ export const screenResize = {
     // https://vuejs.org/v2/style-guide/index.html#Private-property-names-essential
     $_resizeHandler(width) {
       // console.log("width", width);
-      const _breakpoint = this._breakpoint;
-      for (const key in _breakpoint) {
-        if (Object.hasOwnProperty.call(_breakpoint, key)) {
-          _breakpoint[key] = width >= screens[key];
+      const breakpoint_ = this.breakpoint_;
+      for (const key in breakpoint_) {
+        if (Object.hasOwnProperty.call(breakpoint_, key)) {
+          breakpoint_[key] = width >= screens[key];
         }
       }
     },
