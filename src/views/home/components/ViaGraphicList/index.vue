@@ -3,6 +3,7 @@
     <Item
       v-for="item in 10"
       :key="item"
+      @click="$router.push({ name: 'graphic-info' })"
     ></Item>
   </div>
 </template>
