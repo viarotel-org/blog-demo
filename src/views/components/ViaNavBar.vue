@@ -35,7 +35,7 @@
       class="absolute"
     >
       <source
-        src="https://image.raindays.cn/Mood/music/1611987803353.mp3"
+        src="@/assets/musics/bg-music.mp3"
         type="audio/ogg"
       />
     </audio>

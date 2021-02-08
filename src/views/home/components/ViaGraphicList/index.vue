@@ -1,5 +1,5 @@
 <template>
-  <div class="relative line-y py-8 lg:py-16">
+  <div class="relative line-y py-12 lg:py-24">
     <Item
       v-for="item in 10"
       :key="item"

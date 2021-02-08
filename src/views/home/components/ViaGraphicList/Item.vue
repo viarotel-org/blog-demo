@@ -2,7 +2,7 @@
   <div
     ref="itemRefs"
     :class="[isReverse ? 'lg:flex-row-reverse' : '']"
-    class="lg:flex lg:justify-center overflow-hidden py-8 lg:py-16"
+    class="lg:flex lg:justify-center overflow-hidden py-12 lg:py-24"
   >
     <div
       class="md:px-12 lg:px-0 lg:hover:shadow-xl lg:transform-gpu lg:hover:scale-105 lg:transition cursor-pointer"
