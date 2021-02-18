@@ -27,8 +27,11 @@ app.use(icons);
 // import contentmenu from "v-contextmenu";
 // import "v-contextmenu/dist/themes/default.css";
 // app.use(contentmenu);
+import { tempImage } from "@/utils";
 //全局挂载的方法对象
-app.config.globalProperties.$via = {};
+app.config.globalProperties.$via = {
+  tempImage,
+};
 
 app.use(store);
 app.use(router);

@@ -1,5 +1,9 @@
 <template>
-  <div class="border-b border-gray-100 flex px-4 py-2 relative">
+  <div
+    v-bind="$attrs"
+    ref="headerRef"
+    class="border-b border-gray-100 bg-white flex px-4 py-2 fixed inset-x-0 top-0 z-50"
+  >
     <div class="flex items-center w-1 flex-grow">
       <img
         :src="logo"
@@ -36,14 +40,16 @@
     >
       <source
         src="@/assets/musics/bg-music.mp3"
-        type="audio/ogg"
+        type="audio/mpeg"
       />
     </audio>
   </div>
+  <div class="py-8"></div>
 </template>
 
 <script>
 import { logo } from "@/config";
+import Headroom from "headroom.js";
 export default {
   data() {
     return {
@@ -52,7 +58,15 @@ export default {
       musicPlayProgress: "",
     };
   },
+  mounted() {
+    this.initHeadroom();
+  },
   methods: {
+    initHeadroom() {
+      const headerRef = this.$refs.headerRef;
+      const headroom = new Headroom(headerRef);
+      headroom.init();
+    },
     handleMusic() {
       const musicEl = this.$refs.bgMusicRef;
       this.isMusicPause = !this.isMusicPause;
@@ -72,4 +86,15 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.headroom {
+  will-change: transform;
+  transition: transform 200ms linear;
+}
+.headroom--pinned {
+  transform: translate3d(0, 0%, 0);
+}
+.headroom--unpinned {
+  transform: translate3d(0, -100%, 0);
+}
+</style>

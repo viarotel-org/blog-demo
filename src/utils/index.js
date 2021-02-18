@@ -547,8 +547,8 @@ export function uuid() {
  */
 export function tempImage(w, h) {
   // let tempStr = "http://placekitten.com/" + w + "/";
-  // let tempStr = "https://dummyimage.com/" + w + "x";
-  let tempStr = "http://lorempixel.com/" + w + "/";
+  let tempStr = "https://dummyimage.com/" + w + "x";
+  // let tempStr = "http://lorempixel.com/" + w + "/";
   if (arguments.length === 1) {
     tempStr += w;
   } else {
