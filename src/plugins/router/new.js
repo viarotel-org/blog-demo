@@ -30,6 +30,13 @@ export function createRouter(
   const router = CreateRouter({
     history: createHistory(base),
     routes,
+    scrollBehavior(to, from, savedPosition) {
+      if (savedPosition) {
+        return savedPosition;
+      } else {
+        return { top: 0 };
+      }
+    },
     ...moreOptions,
   });
   return router;

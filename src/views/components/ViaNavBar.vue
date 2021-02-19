@@ -2,7 +2,7 @@
   <div
     v-bind="$attrs"
     ref="headerRef"
-    class="border-b border-gray-100 bg-white flex px-4 py-2 fixed inset-x-0 top-0 z-50"
+    class="bg-white bg-opacity-75 backdrop-filter-blur-px-5 flex px-4 py-2 fixed inset-x-0 top-0 z-50 shadow-sm"
   >
     <div class="flex items-center w-1 flex-grow">
       <img
@@ -17,16 +17,36 @@
         @click="handleMusic"
       ></via-svg-icon>
     </div>
-    <div class="truncate w-1 flex-grow text-center my-auto">如此，安好</div>
+    <div
+      :class="isTitle ? 'opacity-100' : 'opacity-0'"
+      class="truncate w-1 flex-grow text-center my-auto cursor-pointer transition-opacity duration-300"
+      @click="$emit('click-title')"
+    >
+      {{ title }}
+    </div>
     <div class="w-1 flex-grow flex items-center justify-end">
       <via-svg-icon
+        v-if="isWx"
+        v-click-away="() => (isQRCode = false)"
         name="wx"
-        class="text-gray-600 text-2xl ml-4 cursor-pointer hover:text-green-500"
+        :class="isQRCode ? 'text-green-500' : 'text-gray-600'"
+        class=" text-2xl ml-4 cursor-pointer hover:text-green-500"
+        @click="isQRCode = !isQRCode"
       ></via-svg-icon>
+
       <via-svg-icon
+        v-if="isLike"
         name="like"
         class="text-gray-600 text-2xl ml-4 cursor-pointer hover:text-red-500"
       ></via-svg-icon>
+      <!-- @click="$emit('update:likeValue', likeValue)" -->
+      <img
+        v-if="isAvatar"
+        src="@/assets/images/avatar.gif"
+        title="查看主页"
+        alt=""
+        class="w-8 h-8 rounded-full ml-4 cursor-pointer border border-gray-300 opacity-70 hover:opacity-100"
+      />
     </div>
 
     <div
@@ -43,6 +63,16 @@
         type="audio/mpeg"
       />
     </audio>
+    <img
+      src="@/assets/images/QRCode.jpg"
+      alt=""
+      :class="
+        isQRCode
+          ? 'opacity-100 translate-y-0 scale-100'
+          : 'opacity-0 -translate-y-18 scale-0'
+      "
+      class="w-30 h-30 fixed top-0 right-0 mt-18 mr-4 z-50 transition-all duration-300 transform-gpu border-4 border-white rounded-md"
+    />
   </div>
   <div class="py-8"></div>
 </template>
@@ -51,11 +81,34 @@
 import { logo } from "@/config";
 import Headroom from "headroom.js";
 export default {
+  props: {
+    title: {
+      type: String,
+      default: "",
+    },
+    isTitle: {
+      type: Boolean,
+    },
+    isWx: {
+      type: Boolean,
+      default: true,
+    },
+    isLike: {
+      type: Boolean,
+      default: true,
+    },
+    isAvatar: {
+      type: Boolean,
+      default: true,
+    },
+  },
+  emits: ["click-title"],
   data() {
     return {
       logo: logo(),
       isMusicPause: false,
       musicPlayProgress: "",
+      isQRCode: false,
     };
   },
   mounted() {
@@ -64,7 +117,11 @@ export default {
   methods: {
     initHeadroom() {
       const headerRef = this.$refs.headerRef;
-      const headroom = new Headroom(headerRef);
+      const headroom = new Headroom(headerRef, {
+        onUnpin: () => {
+          this.isQRCode = false;
+        },
+      });
       headroom.init();
     },
     handleMusic() {
@@ -86,15 +143,15 @@ export default {
 };
 </script>
 
-<style>
+<style lang="postcss">
 .headroom {
   will-change: transform;
-  transition: transform 200ms linear;
+  @apply transition-transform duration-200 ease-linear transform-gpu;
 }
 .headroom--pinned {
-  transform: translate3d(0, 0%, 0);
+  @apply translate-y-0;
 }
 .headroom--unpinned {
-  transform: translate3d(0, -100%, 0);
+  @apply -translate-y-full;
 }
 </style>

@@ -130,7 +130,7 @@ export function nodeIndex(el) {
  * @desc 滚动到顶部
  * @param {string} el 元素的选择器或或者元素本身
  */
-export function scrollToTop(el = "body") {
+export function scrollToTop(el = "html") {
   const scrollTop = getElement(el).scrollTop;
   if (scrollTop > 0) {
     window.requestAnimationFrame(() => scrollToTop(getElement(el)));

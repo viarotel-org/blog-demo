@@ -13,7 +13,7 @@ export function createRouter(
   //路由防抖
   const originalPush = VueRouter.prototype.push;
   VueRouter.prototype.push = function push(location) {
-    return originalPush.call(this, location).catch(err => err);
+    return originalPush.call(this, location).catch((err) => err);
   };
 
   Vue.use(VueRouter);
@@ -22,6 +22,13 @@ export function createRouter(
     mode,
     base,
     routes,
-    ...moreOptions
+    scrollBehavior(to, from, savedPosition) {
+      if (savedPosition) {
+        return savedPosition;
+      } else {
+        return { x: 0, y: 0 };
+      }
+    },
+    ...moreOptions,
   });
 }

@@ -7,11 +7,6 @@
     -webkit-user-select: none; /*禁止选中文字*/
   }
 
-  input {
-    outline: none !important;
-    -webkit-appearance: none; /*去除ios阴影*/
-  }
-
   /* 解决使用有赞下拉刷新组件,sticky无效的问题 */
   .van-pull-refresh {
     overflow: initial !important;

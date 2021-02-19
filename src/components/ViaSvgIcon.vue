@@ -11,7 +11,7 @@
     class="svg-icon"
     aria-hidden="true"
   >
-    <use :xlink:href="iconName" />
+    <use :xlink:href="iconUrl" />
   </svg>
 </template>
 
@@ -25,19 +25,19 @@ export default {
     },
   },
   computed: {
-    isExternalExe() {
-      return this.isExternal(this.iconClass);
-    },
-    iconClass() {
+    iconName() {
       return this.name;
     },
-    iconName() {
-      return `#icon-${this.iconClass}`;
+    isExternalExe() {
+      return this.isExternal(this.iconName);
+    },
+    iconUrl() {
+      return `#icon-${this.iconName}`;
     },
     styleExternalIcon() {
       return {
-        mask: `url(${this.iconClass}) no-repeat 50% 50%`,
-        "-webkit-mask": `url(${this.iconClass}) no-repeat 50% 50%`,
+        mask: `url(${this.iconName}) no-repeat 50% 50%`,
+        "-webkit-mask": `url(${this.iconName}) no-repeat 50% 50%`,
       };
     },
   },

@@ -1,6 +1,11 @@
 <template>
   <div class="">
-    <div class="text-3xl md:text-4xl font-bold">你凭什么上北大</div>
+    <div
+      v-observer="onObserver"
+      class="text-3xl md:text-4xl font-bold"
+    >
+      你凭什么上北大
+    </div>
     <div class="text-gray-600 text-sm md:text-base mt-4 md:mt-6">
       <span
         class="mr-4"
@@ -22,7 +27,16 @@
 </template>
 
 <script>
-export default {};
+export default {
+  emits: ["isIntersecting"],
+  methods: {
+    onObserver([entrie]) {
+      const { isIntersecting } = entrie;
+      console.log("isIntersecting", isIntersecting);
+      this.$emit("isIntersecting", isIntersecting);
+    },
+  },
+};
 </script>
 
 <style></style>

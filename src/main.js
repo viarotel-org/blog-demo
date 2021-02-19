@@ -8,9 +8,10 @@ import "./styles/css/index.css";
 
 const app = createApp(App);
 //挂载全局指令
-import { onReverse, clampAuto } from "./directive/index";
-app.use(onReverse);
+import { clickAway, clampAuto, observer } from "./directive/index";
+app.use(clickAway);
 app.use(clampAuto);
+app.use(observer);
 //全局混入
 // import { screenResize } from "./mixins";
 // app.use(screenResize);
@@ -27,10 +28,11 @@ app.use(icons);
 // import contentmenu from "v-contextmenu";
 // import "v-contextmenu/dist/themes/default.css";
 // app.use(contentmenu);
-import { tempImage } from "@/utils";
+import { tempImage, scrollToTop } from "@/utils";
 //全局挂载的方法对象
 app.config.globalProperties.$via = {
   tempImage,
+  scrollToTop,
 };
 
 app.use(store);

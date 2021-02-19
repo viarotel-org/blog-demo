@@ -8,12 +8,6 @@
     @apply inline-block align-baseline;
   }
 
-  input,
-  textarea,
-  button:focus {
-    @apply outline-none;
-  }
-
   img {
     position: relative;
   }

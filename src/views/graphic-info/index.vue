@@ -1,11 +1,19 @@
 <template>
   <div class="">
-    <ViaNavBar class="" />
+    <ViaNavBar
+      class=""
+      title="你凭什么上北大"
+      :is-title="isTitle"
+      @click-title="$via.scrollToTop()"
+    />
     <ViaContent>
-      <ViaTitle class="mt-4 md:mt-20" />
+      <ViaTitle
+        class="mt-4 md:mt-20 via-title"
+        @is-intersecting="(value) => (isTitle = !value)"
+      />
       <ViaMavonEditor class="mt-8 md:mt-24" />
-      <ViaComment class="mt-8" />
-      <ViaCommentList class="mt-8" />
+      <ViaComment class="mt-16" />
+      <ViaCommentList class="mt-16" />
     </ViaContent>
   </div>
 </template>
@@ -25,6 +33,11 @@ export default {
     ViaMavonEditor,
     ViaComment,
     ViaCommentList,
+  },
+  data() {
+    return {
+      isTitle: false,
+    };
   },
 };
 </script>

@@ -33,11 +33,11 @@ export default {
 
 .fade-transform-enter {
   opacity: 0;
-  transform: translateX(-30px);
+  transform: translate3d(-30px, 0, 0);
 }
 
 .fade-transform-leave-to {
   opacity: 0;
-  transform: translateX(30px);
+  transform: translate3d(30px, 0, 0);
 }
 </style>

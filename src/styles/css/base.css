@@ -2,6 +2,17 @@
   html {
     font-size: 14px;
   }
+
+  input,
+  textarea,
+  button:focus {
+    @apply outline-none;
+  }
+
+  input,
+  textarea {
+    -webkit-appearance: none; /*去除ios阴影*/
+  }
 }
 
 @layer utilities {

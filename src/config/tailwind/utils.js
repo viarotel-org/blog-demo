@@ -47,7 +47,11 @@ const baseConfig = {
     require("tailwindcss-textshadow"), // 文字阴影
     require("tailwindcss-line-clamp"), // 文字截断
   ],
-  variants: {},
+  variants: {
+    extend: {
+      display: ["group-hover"],
+    },
+  },
 };
 
 const colors = {
