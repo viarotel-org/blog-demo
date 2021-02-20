@@ -32,7 +32,7 @@ export default {
   methods: {
     onObserver([entrie]) {
       const { isIntersecting } = entrie;
-      console.log("isIntersecting", isIntersecting);
+      // console.log("isIntersecting", isIntersecting);
       this.$emit("isIntersecting", isIntersecting);
     },
   },

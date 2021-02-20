@@ -50,6 +50,12 @@ const baseConfig = {
   variants: {
     extend: {
       display: ["group-hover"],
+      textOverflow: ["group-hover"],
+      whitespace: ["group-hover"],
+      overflow: ["group-hover"],
+      height: ["group-hover"],
+      transitionDelay: ["group-hover", "hover"],
+      animation: ["hover"],
     },
   },
 };

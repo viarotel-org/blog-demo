@@ -18,7 +18,7 @@
         v-for="(item, index) of menuArr"
         :key="index"
         class="mx-8 hover:text-black text-shadow-md flex-shrink-0 cursor-pointer"
-        @click="skip"
+        @click="skip(item)"
       >{{ item.text }}</span>
     </div>
     <div class="text-center pb-8 text-gray-500">
@@ -40,10 +40,10 @@ export default {
       return [
         {
           id: "article",
-          text: "文章",
+          text: "分类",
         },
         {
-          id: "message",
+          id: "envelope",
           text: "信封",
         },
         {
@@ -54,7 +54,12 @@ export default {
     },
   },
   methods: {
-    skip() {
+    skip({ id }) {
+      switch (id) {
+        case "envelope":
+          this.$router.push({ name: "envelope" });
+          break;
+      }
       this.close();
     },
     close() {

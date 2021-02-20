@@ -1,5 +1,5 @@
 /**
- * @desc 指令 文本超出显示省略号 v-text-clamp:[arg]="value"
+ * @desc 指令 文本超出显示省略号 v-clamp-auto:[arg]="value"
  * @param arg  arg 为行数
  * @param value  value为最多显示value个文字
  */

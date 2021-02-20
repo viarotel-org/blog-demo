@@ -30,22 +30,27 @@
         v-click-away="() => (isQRCode = false)"
         name="wx"
         :class="isQRCode ? 'text-green-500' : 'text-gray-600'"
-        class=" text-2xl ml-4 cursor-pointer hover:text-green-500"
+        class=" text-2xl ml-4 cursor-pointer lg:hover:text-green-500"
         @click="isQRCode = !isQRCode"
       ></via-svg-icon>
 
       <via-svg-icon
         v-if="isLike"
         name="like"
-        class="text-gray-600 text-2xl ml-4 cursor-pointer hover:text-red-500"
+        :class="
+          likeValue
+            ? 'text-red-500 lg:hover:text-red-500'
+            : 'text-gray-600 lg:hover:text-gray-600'
+        "
+        class="text-2xl ml-4 cursor-pointer  lg:hover:animate-bounce"
+        @click="$emit('update:likeValue', !likeValue)"
       ></via-svg-icon>
-      <!-- @click="$emit('update:likeValue', likeValue)" -->
       <img
         v-if="isAvatar"
         src="@/assets/images/avatar.gif"
         title="查看主页"
         alt=""
-        class="w-8 h-8 rounded-full ml-4 cursor-pointer border border-gray-300 opacity-70 hover:opacity-100"
+        class="w-8 h-8 rounded-full ml-4 cursor-pointer border border-gray-300 opacity-70 hover:opacity-100 hover:animate-spin"
       />
     </div>
 
@@ -101,8 +106,11 @@ export default {
       type: Boolean,
       default: true,
     },
+    likeValue: {
+      type: Boolean,
+    },
   },
-  emits: ["click-title"],
+  emits: ["click-title", "update:likeValue"],
   data() {
     return {
       logo: logo(),
