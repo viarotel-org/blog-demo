@@ -1,6 +1,6 @@
 # blog-web
 
-基于vue3.x的博客项目,router已配置路由表自动生成(可通过混入选项更改个别的路由配置) ui库使用 element-plus(已配置按需导入), css 框架使用 tailwindcss(下一代css框架), 请求使用axios的方式(完善了aes+rsa接口加密功能) [查看预览地址(用户名密码不为空即可)](https://blog-web.viarotel.vercel.app)
+基于vue3.x的博客项目,router已配置路由表自动生成(可通过混入选项更改个别的路由配置)  css 框架使用 tailwindcss(下一代css框架), 请求使用axios的方式(完善了aes+rsa接口加密功能) [查看预览地址(用户名密码不为空即可)](https://blog-web.viarotel.vercel.app)
 
 <!-- PROJECT SHIELDS -->
 
@@ -114,14 +114,12 @@ filetree
 ### 使用到的框架
 
 - [Vue-CLI](https://cli.vuejs.org)
-- [element-plus](https://element-plus.org/)
 - [tailwindcss](https://www.tailwindcss.cn/)
 - [axios](http://www.axios-js.com/)
 
 ### 关键字
 
 - vue3.x
-- element-plus
 - tailwindcss
 - axios
 
@@ -144,7 +142,7 @@ qq:523469508 wx: luyao-ing
 ### 鸣谢
 
 
-- 感谢[PanJiaChen/vue-element-admin](https://github.com/PanJiaChen/vue-element-admin/) 带给我灵感
+- 感谢[wsydxiangwang/Mood](https://github.com/wsydxiangwang/Mood) 带给我灵感
 
 <!-- links -->
 
